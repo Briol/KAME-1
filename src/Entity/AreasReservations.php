@@ -29,5 +29,4 @@ class AreasReservations
      */
     private $areas;
 
-
 }
