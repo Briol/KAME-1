@@ -29,10 +29,5 @@ class AreasReservations
      */
     private $areas;
 
-    /**
-     * @ORM\ManyToOne(targetEntity="App\Entity\Areas")
-     * @ORM\JoinColumn(name="id_areas",referencedColumnName="id")
-     */
-    private $areas;
 
 }
