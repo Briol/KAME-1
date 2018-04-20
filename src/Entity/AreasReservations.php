@@ -2,14 +2,14 @@
 
 namespace App\Entity;
 
-use Doctrine\ORM\Mapping as ORM;
+use Doctrine\ORM\Mapping\Entity;
 
 /**
  * @ORM\Entity
  * @ORM\Table(name="AreasReservation")
  * @ORM\Entity(repositoryClass="App\Repository\ReservationRepository")
  */
-class AreasReservations
+class AreasReservations extends Entity
 {
     /**
      * @ORM\Id()
@@ -28,5 +28,11 @@ class AreasReservations
      * @ORM\JoinColumn(name="id_areas",referencedColumnName="id")
      */
     private $areas;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\teacher")
+     * @ORM\JoinColumn(name="id_teaacher",referencedColumnName="id")
+     */
+    private $teacher;
 
 }
