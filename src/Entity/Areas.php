@@ -2,14 +2,14 @@
 
 namespace App\Entity;
 
-use Doctrine\ORM\Mapping as ORM;
+use Doctrine\ORM\Mapping\Entity;
 
 /**
  * @ORM\Entity
  * @ORM\Table(name="Areas")
  * @ORM\Entity(repositoryClass="App\Repository\SalleRepository")
  */
-class Areas
+class Areas extends Entity
 {
     /**
      * @ORM\Id()
@@ -24,7 +24,7 @@ class Areas
     }
 
     /**
-     * @ORM\Column(lenght=25, nullable=false)
+     * @ORM\Column(length=25, nullable=false)
      */
     private $nomSalle;
 
@@ -43,65 +43,41 @@ class Areas
      */
     private $capacitySalleHandicap;
 
-    /**
-     * @return mixed
-     */
     public function getNomSalle()
     {
         return $this->nomSalle;
     }
 
-    /**
-     * @param mixed $nomSalle
-     */
     public function setNomSalle($nomSalle): void
     {
         $this->nomSalle = $nomSalle;
     }
 
-    /**
-     * @return mixed
-     */
     public function getCapacitySalleDebout()
     {
         return $this->capacitySalleDebout;
     }
 
-    /**
-     * @param mixed $capacitySalleDebout
-     */
     public function setCapacitySalleDebout($capacitySalleDebout): void
     {
         $this->capacitySalleDebout = $capacitySalleDebout;
     }
 
-    /**
-     * @return mixed
-     */
     public function getCapacitySalleAssis()
     {
         return $this->capacitySalleAssis;
     }
 
-    /**
-     * @param mixed $capacitySalleAssis
-     */
     public function setCapacitySalleAssis($capacitySalleAssis): void
     {
         $this->capacitySalleAssis = $capacitySalleAssis;
     }
 
-    /**
-     * @return mixed
-     */
     public function getCapacitySalleHandicap()
     {
         return $this->capacitySalleHandicap;
     }
 
-    /**
-     * @param mixed $capacitySalleHandicap
-     */
     public function setCapacitySalleHandicap($capacitySalleHandicap): void
     {
         $this->capacitySalleHandicap = $capacitySalleHandicap;

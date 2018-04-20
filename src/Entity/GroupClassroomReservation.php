@@ -24,8 +24,7 @@ class GroupClassroomReservation
     }
 
     /**
-     * @ORM\Column(lenght=255, nullable=false-t
-     *    )
+     * @ORM\Column(length=255, nullable=false)
      */
     private $groupName;
 
@@ -34,33 +33,21 @@ class GroupClassroomReservation
      */
     private $nbStudent;
 
-    /**
-     * @return mixed
-     */
     public function getGroupName()
     {
         return $this->groupName;
     }
 
-    /**
-     * @param mixed $groupName
-     */
     public function setGroupName($groupName): void
     {
         $this->groupName = $groupName;
     }
 
-    /**
-     * @return mixed
-     */
     public function getNbStudent()
     {
         return $this->nbStudent;
     }
 
-    /**
-     * @param mixed $nbStudent
-     */
     public function setNbStudent($nbStudent): void
     {
         $this->nbStudent = $nbStudent;

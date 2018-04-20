@@ -2,14 +2,14 @@
 
 namespace App\Entity;
 
-use Doctrine\ORM\Mapping as ORM;
+use Doctrine\ORM\Mapping\Entity;
 
 /**
  * @ORM\Entity
  * @ORM\Table(name="EquipementReservations")
  * @ORM\Entity(repositoryClass="App\Repository\EquipementRepository")
  */
-class EquipementReservations
+class EquipementReservations extends Entity
 {
     /**
      * @ORM\Id()
@@ -33,33 +33,21 @@ class EquipementReservations
      */
     private $equipementStatus;
 
-    /**
-     * @return mixed
-     */
     public function getEquipementLabel()
     {
         return $this->equipementLabel;
     }
 
-    /**
-     * @param mixed $equipementLabel
-     */
     public function setEquipementLabel($equipementLabel): void
     {
         $this->equipementLabel = $equipementLabel;
     }
 
-    /**
-     * @return mixed
-     */
     public function getEquipementStatus()
     {
         return $this->equipementStatus;
     }
 
-    /**
-     * @param mixed $equipementStatus
-     */
     public function setEquipementStatus($equipementStatus): void
     {
         $this->equipementStatus = $equipementStatus;
